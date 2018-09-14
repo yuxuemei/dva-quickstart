@@ -1,8 +1,10 @@
 import dva from 'dva';
+import { createBrowserHistory as createHistory } from 'history';
 import './index.css';
 
 // 1. Initialize
 const app = dva({
+	history: createHistory(),
 	initialState:{
 		products:[
 		    {name:'dva',id:1,key:1},
